@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: orderdetail
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: orderdetail
+  template:
+    metadata:
+      labels:
+        app: orderdetail
+    spec:
+      containers:
+        - name: orderdetail-ctr
+          image: digitaltechnomind/orderdetail-service:v2
+          ports:
+            - containerPort: 8092

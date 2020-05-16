@@ -1,0 +1,8 @@
+kind: ConfigMap
+apiVersion: v1
+metadata:
+  name: userorder-configmap
+data:
+  # Configuration values can be set as key-value properties
+  MYSQL_DB_URL: jdbc:mysql://mysql-service.default.svc.cluster.local:3306/trainingnew?serverTimezone=UTC
+  MYSQL_DB_USER: root
